@@ -3,7 +3,7 @@
                     xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf">
 
     <Style x:Key="MaterialDesignScrollBarButton" TargetType="{x:Type RepeatButton}">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignSelection}" />
         <Setter Property="Background" Value="{DynamicResource MaterialDesignSelection}" />
         <Setter Property="BorderThickness" Value="1"/>

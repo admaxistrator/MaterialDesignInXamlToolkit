@@ -139,6 +139,7 @@
     </Style>
 
     <Style x:Key="MaterialDesignGridViewItem" TargetType="ListViewItem">
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="Background" Value="Transparent" />
@@ -152,7 +153,7 @@
                             BorderBrush="{DynamicResource MaterialDesignDivider}"
                             BorderThickness="0,0,0,1"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                        <GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        <GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

@@ -10,16 +10,6 @@
     <converters:MathConverter Operation="Divide" x:Key="DivisionMathConverter" />
     <converters:PointValueConverter x:Key="PointValueConverter" />
 
-    <Style x:Key="FocusVisual">
-        <Setter Property="Control.Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <wpf:PackIcon x:Key="CheckMarkIcon" x:Shared="False" Kind="Check" Width="24" Height="24" FlowDirection="LeftToRight" />
 
     <Style x:Key="MaterialDesignActionToggleButton" TargetType="{x:Type ToggleButton}">
@@ -260,7 +250,7 @@
     </Style>
 
     <Style x:Key="MaterialDesignSwitchToggleButton" TargetType="{x:Type ToggleButton}">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}"/>
         <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
@@ -426,7 +416,7 @@
     <Style x:Key="MaterialDesignHamburgerToggleButton" TargetType="{x:Type ToggleButton}">
         <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type FrameworkElement}}, Path=(TextElement.Foreground)}"/>
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>

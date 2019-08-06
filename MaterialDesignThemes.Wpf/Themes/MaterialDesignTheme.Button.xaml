@@ -13,16 +13,6 @@
         </ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="FocusVisual">
-        <Setter Property="Control.Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <converters:RangeLengthConverter x:Key="RangeLengthConverter" />
     <converters:MathConverter x:Key="MathAddConverter" Operation="Add" />
     <system:Int32 x:Key="ProgressRingStrokeWidth">8</system:Int32>
@@ -30,7 +20,7 @@
     <SolidColorBrush x:Key="AttentionToActionBrush" Color="{StaticResource MaterialDesignShadow}" Opacity=".23" po:Freeze="True" />
 
     <Style x:Key="MaterialDesignRaisedButton" TargetType="{x:Type ButtonBase}">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}"/>
         <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}"/>
@@ -130,7 +120,7 @@
     </Style>
 
     <Style x:Key="MaterialDesignFlatButton" TargetType="{x:Type ButtonBase}">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Cursor" Value="Hand"/>
@@ -278,7 +268,7 @@
     </Style>
 
     <Style x:Key="MaterialDesignFloatingActionMiniButton" TargetType="{x:Type ButtonBase}">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}"/>
         <Setter Property="Background" Value="{DynamicResource PrimaryHueMidBrush}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidForegroundBrush}"/>
