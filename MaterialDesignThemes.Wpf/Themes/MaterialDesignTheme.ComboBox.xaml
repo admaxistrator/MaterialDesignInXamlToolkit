@@ -568,6 +568,15 @@
                 <Setter Property="BorderBrush" Value="{Binding Path=(wpf:TextFieldAssist.UnderlineBrush), RelativeSource={RelativeSource Self}}" />
                 <Setter TargetName="Underline" Property="Background" Value="{Binding Path=(wpf:TextFieldAssist.UnderlineBrush), RelativeSource={RelativeSource TemplatedParent}}" />
             </MultiTrigger>
+            <Trigger Property="IsReadOnly" Value="True">
+                <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="contentPresenter" Property="Visibility" Value="Visible" />
+                <Setter TargetName="toggleButton" Property="Visibility" Value="Hidden" />
+                <Setter TargetName="DashedLine" Property="Visibility" Value="Hidden" />
+                <Setter TargetName="Underline" Property="Visibility" Value="Hidden" />
+                <Setter Property="Focusable" Value="False" />
+                <Setter Property="IsHitTestVisible" Value="False" />
+            </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
